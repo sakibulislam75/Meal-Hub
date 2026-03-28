@@ -1,0 +1,22 @@
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 75%;
+    margin: 60px 10px;
+}
+
+.right {
+    border: 2px solid tomato;
+    width: 25%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.parent {
+    display: flex;
+}
