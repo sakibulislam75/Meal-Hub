@@ -1,0 +1,15 @@
+.lft {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.rht {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav {
+    background-color: gainsboro;
+}
