@@ -8,14 +8,20 @@ import { ToastContainer, toast } from 'react-toastify';
 const FoodSection = ({ fd }) => {
     const food = use(fd); //object akare ase(depend on api data formate)
     const foods = food.meals; //object r vitor array access
-    const [cart, SetCart] = useState([]);
+    const [cart, setCart] = useState([]);
     const AddToCart = (addCart) => {
-        SetCart([...cart, addCart]);
+        const exist=cart.find(food=>food.idMeal===addCart.idMeal);
+        if(exist){
+            const remaining=cart.filter(food=>food.idMeal!==addCart.idMeal);
+            setCart(remaining);
+        } else {
+            setCart([...cart, addCart]);
+        }
     };
     const Order = () => {
-        SetCart([]);
+        setCart([]);
         if (cart.length !== 0) {
-           toast("Successfully Place The Order!");
+           toast.success("Successfully Place The Order!");
         }
     }
 
